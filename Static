@@ -1,0 +1,37 @@
+public class Main {
+    public static void main(String[] args) {
+
+        /*Faz com que uma variável ou método pertença à classe, em vez de a um objeto específico.
+          Comumente usado para métodos utilitários ou recursos compartilhados.*/
+
+        Amigo amigo1= new Amigo("Eduardo");
+        Amigo amigo2= new Amigo("Aldryn");
+        Amigo amigo3= new Amigo("Clarinha");
+        Amigo amigo4= new Amigo("Chiquinha");
+        Amigo amigo5= new Amigo("Pelezinho");
+        
+
+        System.out.println(Amigo.numeroAmigos);
+
+        Amigo.mostraAmigo();
+        
+    }
+}
+
+
+
+public class Amigo {
+
+    String nome;
+    static int numeroAmigos;
+
+    Amigo(String nome){
+        this.nome = nome;
+        numeroAmigos++;
+    }
+
+    static void mostraAmigo(){
+        System.out.println("Você tem " + numeroAmigos + " amigos");
+    }
+
+}
