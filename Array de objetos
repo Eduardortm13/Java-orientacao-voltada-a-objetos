@@ -1,0 +1,44 @@
+public class Main{
+    public static void main(String[] args){
+
+
+        /*Car carro1 = new Car("Lancer GT", "prata");
+        Car carro2 = new Car("HB20", "preto");
+        Car carro3 = new Car("Civic", "branco");*/
+
+        //Car[] carros = new Car[3]; ou Car[] carros = {carro1, carro2, carro3}
+
+        //Car [] carros = {carro1, carro2, carro3};
+
+        Car[] carros = {new Car("Lancer GT", "prata"), new Car("Honda Civid", "preto"), new Car("HB20", "prata")};
+
+        /*for(int i = 0; i < 3; i++){
+            carros[i].dirige();          os dois for fazem a mesma coisa, só escolher um e usar
+        }*/
+
+        for(Car carro : carros){
+            carro.cor = "preto";
+        }
+        for(Car carro : carros){
+            carro.dirige();
+        }
+    }
+}
+
+
+public class Car {
+
+    String modelo;
+    String cor;
+
+    Car(String modelo, String cor){
+        this.modelo = modelo;
+        this.cor = cor;
+    }
+
+    void dirige(){
+        System.out.println("Você dirige um " + this.modelo + " " + "da cor " + this.cor);
+    }
+
+}
+
