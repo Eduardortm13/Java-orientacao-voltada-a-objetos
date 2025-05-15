@@ -10,14 +10,14 @@ public class Main{
 
         //Car [] carros = {carro1, carro2, carro3};
 
-        Car[] carros = {new Car("Lancer GT", "prata"), new Car("Honda Civid", "preto"), new Car("HB20", "prata")};
+        Car[] carros = {new Car("Lancer GT", "prata"), new Car("Honda Civic", "preto"), new Car("HB20", "prata")};
 
         /*for(int i = 0; i < 3; i++){
             carros[i].dirige();          os dois for fazem a mesma coisa, só escolher um e usar
         }*/
 
         for(Car carro : carros){
-            carro.cor = "preto";
+            carro.cor = "rosa";
         }
         for(Car carro : carros){
             carro.dirige();
