@@ -6,7 +6,7 @@ public class Main{
         Car carro2 = new Car("HB20", "preto");
         Car carro3 = new Car("Civic", "branco");*/
 
-        //Car[] carros = new Car[3]; ou Car[] carros = {carro1, carro2, carro3}
+        //Car[] carros = new Car[3]; OU Car[] carros = {carro1, carro2, carro3}
 
         //Car [] carros = {carro1, carro2, carro3};
 
