@@ -1,0 +1,44 @@
+public class Main{
+    public static void main(String[] args){
+
+
+        Carro carro = new Carro ();
+        System.out.println(carro.estaLigado);
+        carro.ligar();
+        System.out.println(carro.estaLigado);
+        carro.desligar();
+        System.out.println(carro.estaLigado);
+        carro.dirige();
+        carro.freia();
+
+
+
+    }
+}
+
+
+
+public class Carro {
+
+    String marca = "Ford";
+    String modelo = "Mustang";
+    int ano = 2025;
+    double preco = 50000.99;
+    boolean estaLigado = false;
+
+    void ligar(){
+        estaLigado = true;
+        System.out.println("Você liga o carro");
+    }
+    void desligar(){
+        estaLigado = false;
+        System.out.println("Você desliga o carro");
+    }
+    void dirige(){
+        System.out.println("Você dirige o " + modelo);
+    }
+    void freia(){
+        System.out.println("Você freia o " + modelo);
+    }
+
+}
