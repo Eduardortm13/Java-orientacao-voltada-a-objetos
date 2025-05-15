@@ -1,0 +1,47 @@
+public class Main{
+    public static void main(String[] args){
+        Aluno aluno1 = new Aluno("Eduardo", 24, 8);
+        Aluno aluno2 = new Aluno("Aldryn", 25, 7.5);
+        Aluno aluno3 = new Aluno("Clarinha", 12, 10);
+
+        System.out.println(aluno1.nome);
+        System.out.println(aluno1.idade);
+        System.out.println(aluno1.CR);
+        System.out.println(aluno1.estaMatriculado);
+        System.out.println(aluno2.nome);
+        System.out.println(aluno2.idade);
+        System.out.println(aluno2.CR);
+        System.out.println(aluno2.estaMatriculado);
+        System.out.println(aluno3.nome);
+        System.out.println(aluno3.idade);
+        System.out.println(aluno3.CR);
+        System.out.println(aluno3.estaMatriculado);
+
+        aluno1.estuda();
+        aluno2.estuda();
+        aluno3.estuda();
+
+    }
+}
+
+
+
+public class Aluno {
+
+    String nome;
+    int idade;
+    double CR;
+    boolean estaMatriculado = true;
+
+    Aluno (String nome, int idade, double CR){
+        this.nome = nome;
+        this.idade = idade;
+        this.CR = CR;
+        this.estaMatriculado = true;
+
+    }
+
+    void estuda(){
+        System.out.println(this.nome + " está estudando");
+    }
+}
