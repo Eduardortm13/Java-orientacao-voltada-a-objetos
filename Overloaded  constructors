@@ -1,0 +1,58 @@
+public class Main{
+    public static void main(String[] args){
+
+        usuarios usuario1 = new usuarios("Eduardo");
+        usuarios usuario2 = new usuarios("Aldryn", "aldryn@gmail.com");
+        usuarios usuario3 = new usuarios("Clarinha", "clarinha@gmail.com", 12);
+        usuarios usuario4 = new usuarios();
+
+
+        System.out.println(usuario1.login);
+        System.out.println(usuario1.email);
+        System.out.println(usuario1.idade);
+
+        System.out.println(usuario2.login);
+        System.out.println(usuario2.email);
+        System.out.println(usuario2.idade);
+
+        System.out.println(usuario3.login);
+        System.out.println(usuario3.email);
+        System.out.println(usuario3.idade);
+
+        System.out.println(usuario4.login);
+        System.out.println(usuario4.email);
+        System.out.println(usuario4.idade);
+
+
+    }
+}
+
+
+
+
+public class usuarios {
+    String login;
+    String email;
+    int idade;
+
+    usuarios(){
+      this.login = "convidado";
+      this.email = "null";
+      this.idade = 0;
+    }
+    usuarios(String login){
+       this.login = login;
+       this.email = "Null";
+       this.idade = 0;
+    }
+    usuarios(String login, String email){
+        this.login = login;
+        this.email = email;
+        this.idade = 0;
+    }
+    usuarios(String login, String email, int idade){
+        this.login = login;
+        this.email = email;
+        this.idade = idade;
+    }
+}
