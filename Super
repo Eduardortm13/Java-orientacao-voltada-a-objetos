@@ -1,0 +1,68 @@
+public class Main {
+    public static void main(String[] args) {
+        //super = refere a classe pai (subclasse <- superclasse)
+        //chama o constructor pai para inicializar atributos
+
+        Pessoa pessoa = new Pessoa("Pinto", "Murcho");
+        Aluno aluno = new Aluno("Saco", "Suado", 8.5);
+        Funcionario funcionario = new Funcionario("Eduardo", "Telles", 7500.75F);
+
+        aluno.mostraNome();
+        System.out.println(aluno.CR);
+        aluno.exibeCR();
+
+        funcionario.mostraNome();
+        funcionario.exibeSalario();
+
+
+
+    }
+}
+
+
+public class Funcionario extends Pessoa{
+
+    float salario;
+
+    Funcionario(String nome, String sobrenome, float salario){
+        super(nome, sobrenome);
+        this.salario = salario;
+    }
+
+    void exibeSalario(){
+        System.out.println(this.nome + " tem um salário de R$" + this.salario);
+    }
+}
+
+
+
+public class Pessoa {
+
+    String nome;
+    String sobrenome;
+
+    Pessoa(String nome, String sobrenome){
+
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+
+    }
+
+    void mostraNome(){
+        System.out.println(this.nome + " " + this.sobrenome);
+    }
+}
+
+
+public class Aluno extends Pessoa{
+
+    double CR;
+    Aluno(String nome, String sobrenome, Double CR){
+        super(nome, sobrenome);
+        this.CR = CR;
+    }
+
+    void exibeCR(){
+        System.out.println(this.nome + " " + this.sobrenome + " tem um CR de " + this.CR);
+    }
+}
