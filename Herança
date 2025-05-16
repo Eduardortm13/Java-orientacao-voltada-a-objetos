@@ -1,0 +1,77 @@
+public class Main {
+    public static void main(String[] args) {
+
+
+
+        //herança = filho <- pai <- avo
+
+        Cachorro cachorro = new Cachorro();
+        Gato gato = new Gato();
+        Planta planta = new Planta();
+
+        System.out.println(cachorro.estaVivo);
+        System.out.println(gato.estaVivo);
+        System.out.println(planta.estaVivo);
+
+        cachorro.come();
+        cachorro.fala();
+        planta.fotossintese();
+        gato.come();
+        gato.fala();
+
+
+
+
+
+    }
+}
+
+
+public class Planta extends Organismo{
+
+    void fotossintese(){
+        System.out.println("Faz fotossíntese");
+    }
+}
+
+
+public class Organismo {
+
+    boolean estaVivo;
+
+    Organismo(){
+        estaVivo = true;
+    }
+
+}
+
+
+public class Animal extends Organismo{
+
+
+
+    void come(){
+        System.out.println("O animal está comendo");
+    }
+
+}
+
+
+public class Cachorro extends Animal{
+
+    int lives = 1;
+
+    void fala(){
+        System.out.println("Está latindo");
+    }
+}
+
+
+public class Gato extends Animal{
+
+    int vidas = 9;
+
+    void fala(){
+        System.out.println("Está miando");
+    }
+}
