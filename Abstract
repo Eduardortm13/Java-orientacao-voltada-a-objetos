@@ -1,0 +1,83 @@
+public class Main {
+    public static void main(String[] args) {
+
+        //Uma classe abstrata é como um molde: ela não pode ser instanciada diretamente.
+        //Serve como base para outras classes.
+
+        Circulo circulo = new Circulo(5);
+        Triangulo triangulo = new Triangulo(4,6);
+        Retangulo retangulo = new Retangulo(4,8);
+
+        System.out.println(circulo.area());
+        System.out.println(triangulo.area());
+        System.out.println(retangulo.area());
+
+
+    }
+}
+
+
+public abstract class Forma {
+
+    abstract double area(); //ABSTRACT
+
+    void exibe(){   //CONCRETE
+        System.out.println("Isso é um formato");
+    }
+
+
+}
+
+
+public class Circulo extends Forma {
+
+    double raio;
+
+    Circulo(double raio){
+        this.raio = raio;
+    }
+
+    @Override
+    double area() {
+        return Math.PI*raio*raio;
+    }
+}
+
+
+public class Triangulo extends Forma {
+
+
+    double base;
+    double altura;
+
+    Triangulo(double base, double altura){
+        this.base = base;
+        this.altura = altura;
+    }
+
+    @Override
+    double area() {
+        return 0.5*base*altura;
+    }
+}
+
+
+public class Retangulo extends Forma {
+
+    double altura;
+    double largura;
+
+    Retangulo(double altura, double largura){
+        this.altura = altura;
+        this.largura = largura;
+    }
+
+
+    @Override
+    double area() {
+        return altura*largura;
+    }
+}
+
+
+
