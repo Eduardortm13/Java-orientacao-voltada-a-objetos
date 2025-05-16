@@ -1,0 +1,42 @@
+public class Main {
+    public static void main(String[] args) {
+
+        //.toString() é um método da classe base Object, que todas as classes em Java herdam.
+        // Ele serve para retornar uma representação em texto (string) do objeto.
+
+
+        Carro carro1 = new Carro ("Ford", "Mustang", 2020, "Preto");
+        Carro carro2 = new Carro ("Hyundai", "HB20", 2020, "prata");
+
+
+        System.out.println(carro1);
+        System.out.println(carro2);
+
+
+
+    }
+}
+
+
+public class Carro {
+
+    String marca;
+    String modelo;
+    int ano;
+    String cor;
+
+    Carro(String marca, String modelo, int ano, String cor){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+        this.cor = cor;
+    }
+
+    @Override
+    public String toString(){
+        return this.marca + " " + this.modelo + " " + this.ano + " " + this.cor;
+
+    }
+
+}
+
