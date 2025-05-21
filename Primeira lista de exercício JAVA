@@ -1,0 +1,188 @@
+// 1. Para doar sangue é necessário ter idade maior que 20.
+// Faça um programa que pergunte a idade de uma pessoa e exiba a informação se ela pode doar sangue ou não.
+
+import java.util.Scanner;
+
+public class DoacaoSangue {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite sua idade: ");
+        int idade = scanner.nextInt();
+
+        if (idade > 20) {
+            System.out.println("Você pode doar sangue.");
+        } else {
+            System.out.println("Você NÃO pode doar sangue.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+// 2. Faça um programa onde o usuário irá digitar um inteiro e exiba se o número é par ou ímpar.
+// Se for par, o número deverá ser multiplicado por 4 e a informação deverá ser exibida.
+
+import java.util.Scanner;
+
+public class ParOuImpar {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite um número inteiro: ");
+        int numero = scanner.nextInt();
+
+        if (numero % 2 == 0) {
+            int resultado = numero * 4;
+            System.out.println("O número é par.");
+            System.out.println("Multiplicado por 4: " + resultado);
+        } else {
+            System.out.println("O número é ímpar.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+// 3. Fazer um programa para que o usuário digite um número e o programa verifique
+// se os números estão entre o intervalo de valores de 10 e 20.
+// Exibir mensagens se está ou não entre o intervalo de valores.
+
+import java.util.Scanner;
+
+public class VerificaIntervalo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite um número: ");
+        int numero = scanner.nextInt();
+
+        if (numero >= 10 && numero <= 20) {
+            System.out.println("O número está dentro do intervalo de 10 a 20.");
+        } else {
+            System.out.println("O número está FORA do intervalo de 10 a 20.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+// 4. Fazer um programa para que o usuário digite três números
+// e o programa verifique quais números são iguais
+// (podem ser iguais dois números ou os três).
+// Exibir mensagem de quais números são iguais.
+
+import java.util.Scanner;
+
+public class NumerosIguais {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número: ");
+        int a = scanner.nextInt();
+
+        System.out.print("Digite o segundo número: ");
+        int b = scanner.nextInt();
+
+        System.out.print("Digite o terceiro número: ");
+        int c = scanner.nextInt();
+
+        if (a == b && b == c) {
+            System.out.println("Todos os três números são iguais.");
+        } else if (a == b) {
+            System.out.println("O primeiro e o segundo número são iguais.");
+        } else if (a == c) {
+            System.out.println("O primeiro e o terceiro número são iguais.");
+        } else if (b == c) {
+            System.out.println("O segundo e o terceiro número são iguais.");
+        } else {
+            System.out.println("Nenhum dos números é igual.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+// 5. Fazer um programa para que o usuário digite três números
+// e o programa deverá verificar qual é o número do meio.
+// Exibir mensagens com o número.
+// O programa não poderá aceitar valor zero para nenhum dos três números.
+
+import java.util.Scanner;
+
+public class NumeroDoMeio {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a, b, c;
+
+        // Leitura com verificação de zero
+        do {
+            System.out.print("Digite o primeiro número (≠ 0): ");
+            a = scanner.nextInt();
+        } while (a == 0);
+
+        do {
+            System.out.print("Digite o segundo número (≠ 0): ");
+            b = scanner.nextInt();
+        } while (b == 0);
+
+        do {
+            System.out.print("Digite o terceiro número (≠ 0): ");
+            c = scanner.nextInt();
+        } while (c == 0);
+
+        int meio;
+
+        // Lógica para encontrar o número do meio
+        if ((a > b && a < c) || (a < b && a > c)) {
+            meio = a;
+        } else if ((b > a && b < c) || (b < a && b > c)) {
+            meio = b;
+        } else {
+            meio = c;
+        }
+
+        System.out.println("O número do meio é: " + meio);
+
+        scanner.close();
+    }
+}
+
+
+// 6. Fazer um programa para que o usuário digite um número
+// e o programa verifique se o número é múltiplo de 2 ou de 5 ou de 10.
+// Exibir mensagem de erro caso o número digitado não seja múltiplo de nenhum destes.
+// O programa não poderá permitir que o número zero seja digitado,
+// nem negativo e nem maior do que 100.
+
+import java.util.Scanner;
+
+public class VerificaMultiplos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numero;
+
+        do {
+            System.out.print("Digite um número entre 1 e 100: ");
+            numero = scanner.nextInt();
+        } while (numero <= 0 || numero > 100);
+
+        if (numero % 10 == 0) {
+            System.out.println("O número é múltiplo de 10.");
+        } else if (numero % 5 == 0) {
+            System.out.println("O número é múltiplo de 5.");
+        } else if (numero % 2 == 0) {
+            System.out.println("O número é múltiplo de 2.");
+        } else {
+            System.out.println("Erro: o número não é múltiplo de 2, 5 ou 10.");
+        }
+
+        scanner.close();
+    }
+}
+
+
