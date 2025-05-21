@@ -1,0 +1,132 @@
+// 1. Fazer um programa para calcular a área de um retângulo.
+// A fórmula é: area = base * altura.
+// Os valores devem ser digitados pelo usuário, bem como deve ser informado o que ele irá digitar.
+
+import java.util.Scanner;
+
+public class AreaRetangulo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a base do retângulo: ");
+        double base = scanner.nextDouble();
+
+        System.out.print("Digite a altura do retângulo: ");
+        double altura = scanner.nextDouble();
+
+        double area = base * altura;
+
+        System.out.println("A área do retângulo é: " + area);
+
+        scanner.close();
+    }
+}
+
+
+// 2. Fazer um programa para exibir o saldo com reajuste de 1%.
+// O usuário deverá informar via teclado o valor do saldo.
+
+import java.util.Scanner;
+
+public class ReajusteSaldo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o valor do saldo: ");
+        double saldo = scanner.nextDouble();
+
+        double saldoReajustado = saldo + (saldo * 0.01);
+
+        System.out.println("Saldo com reajuste de 1%: " + saldoReajustado);
+
+        scanner.close();
+    }
+}
+
+
+// 3. Fazer um programa para que o usuário informe uma temperatura em graus Celsius
+// e transforme em graus Fahrenheit. Exibir o resultado da conversão.
+// Fórmula: F = (9 * C + 160) / 5
+
+import java.util.Scanner;
+
+public class CelsiusParaFahrenheit {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a temperatura em graus Celsius: ");
+        double celsius = scanner.nextDouble();
+
+        double fahrenheit = (9 * celsius + 160) / 5;
+
+        System.out.println("Temperatura em Fahrenheit: " + fahrenheit);
+
+        scanner.close();
+    }
+}
+
+
+// 4. Fazer um programa para calcular o consumo de um veículo
+// conforme os dados informados no teclado: horas e velocidade média.
+// Fórmulas:
+// distancia = horas * velmedia;
+// consumo = distancia / 12;
+
+import java.util.Scanner;
+
+public class ConsumoVeiculo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o tempo de viagem em horas: ");
+        double horas = scanner.nextDouble();
+
+        System.out.print("Digite a velocidade média (km/h): ");
+        double velocidade = scanner.nextDouble();
+
+        double distancia = horas * velocidade;
+        double consumo = distancia / 12;
+
+        System.out.println("Distância percorrida: " + distancia + " km");
+        System.out.println("Consumo estimado: " + consumo + " litros");
+
+        scanner.close();
+    }
+}
+
+
+// 5. Fazer um programa para cálculo de um salário líquido de um professor.
+// Serão fornecidos: valor da hora/aula, número de aulas dadas e o % de desconto do INSS.
+// Fórmulas:
+// salario = valor da hora/aula * número de aulas dadas;
+// desconto = salario * inss / 100;
+// salario_liquido = salario – desconto;
+
+import java.util.Scanner;
+
+public class SalarioProfessor {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o valor da hora/aula: ");
+        double valorHora = scanner.nextDouble();
+
+        System.out.print("Digite o número de aulas dadas: ");
+        int aulas = scanner.nextInt();
+
+        System.out.print("Digite o percentual de desconto do INSS: ");
+        double inss = scanner.nextDouble();
+
+        double salarioBruto = valorHora * aulas;
+        double desconto = salarioBruto * inss / 100;
+        double salarioLiquido = salarioBruto - desconto;
+
+        System.out.println("Salário bruto: R$ " + salarioBruto);
+        System.out.println("Desconto do INSS: R$ " + desconto);
+        System.out.println("Salário líquido: R$ " + salarioLiquido);
+
+        scanner.close();
+    }
+}
+
+
